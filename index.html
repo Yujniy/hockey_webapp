@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мини-приложение для Telegram</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Судья хоккейного матча</h1>
+  <video class="sticker" autoplay loop muted playsinline>
+    <source src="стикер_медаль.webm" type="video/webm">
+  </video>
+  <button class="button">Начать матч</button>
+
+  <div id="newContent">
+    <h2 class="animate__animated">Название первой команды</h2>
+    <div class="input-container">
+      <input type="text" class="team-name animate__animated" placeholder="Введите название команды" maxlength="20">
+      <span class="character-count animate__animated">
+        <span class="tens">
+          <span class="old-tens">2</span>
+          <span class="new-tens">2</span>
+        </span>
+        <span class="ones">
+          <span class="old-ones">0</span>
+          <span class="new-ones">0</span>
+        </span>
+      </span>
+    </div>
+    <h2 class="animate__animated">Название второй команды</h2>
+    <div class="input-container">
+      <input type="text" class="team-name animate__animated" placeholder="Введите название команды" maxlength="20">
+      <span class="character-count animate__animated">
+        <span class="tens">
+          <span class="old-tens">2</span>
+          <span class="new-tens">2</span>
+        </span>
+        <span class="ones">
+          <span class="old-ones">0</span>
+          <span class="new-ones">0</span>
+        </span>
+      </span>
+    </div>
+    <button class="next-button animate__animated hidden">Далее</button>
+  </div>
+
+<div id="thirdScreen">
+  <h2 class="animate__animated">Выберите время периода игры</h2>
+  <div class="slider-container animate__animated animate__fadeIn">
+    <input type="range" min="1" max="20" value="5" class="slider" id="timeSlider">
+    <span class="slider-value" id="timeValue">5 минут</span>
+  </div>
+  <h2 class="animate__animated">Время перерыва</h2>
+  <div class="slider-container animate__animated animate__fadeIn">
+    <input type="range" min="1" max="10" value="5" class="slider" id="breakTimeSlider">
+    <span class="slider-value" id="breakTimeValue">5 минут</span>
+  </div>
+  <button class="start-button animate__animated">Начать игру</button>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
